@@ -1,0 +1,175 @@
+# ##### Libraries #####
+# import streamlit as st
+# import pandas as pd
+# import numpy as np
+# ##### Libraries #####
+
+# ##### Page config #####
+# # Wide Layout uses entire screen (I prefer),
+# # Centered restricts to centre 
+# st.set_page_config(page_title='Comic Fetcher', 
+# page_icon = "favicon.png", 
+# layout = 'wide', #wide / centered 
+# initial_sidebar_state = 'auto') #prefer auto
+
+# ##### Page config #####
+
+# ##### Columns #####
+# # c1, c2, c3= st.columns((1, 2, 1))
+
+# # with c1:
+# #     st.write("hello")
+
+# # with c2:
+# #     st.write("Austria")
+# #     #st.markdown("<p style = 'text-align: center'> Austria </p>", unsafe_allow_html=True)
+    
+# # with c3:
+# #     st.write("World")
+
+# ##### Columns #####
+
+# ##### Container #####
+
+# c1, c2= st.columns((1, 2))
+
+# header = st.container()
+
+# with header and c1:
+#     st.title("XKCD COMIC FETCHER")
+#     st.header("Get 1 random Comic")
+
+# ##### Container #####
+
+# ##### Text Display Types #####
+
+# # c1, c2 = st.columns((1, 2))
+
+# # with c1:
+# #     st.markdown("<i>Markdown: We are having fun in Pycon Austria </i>", unsafe_allow_html=True)
+# #     st.title("Title: We are having fun in Pycon Austria")
+# #     st.header("Header: We are having fun in Pycon Austria")
+# #     st.subheader("Subheader: We are having fun in Pycon Austria")
+# #     st.caption("Caption: We are having fun in Pycon Austria")
+# #     st.code("Code: print(We are having fun in Pycon Austria)")
+# #     st.text("Text: We are having fun in Pycon Austria")
+# #     st.latex(r"\text{We}^{\text{are}} + \text{having}^{\text{fun}} = \text{Pycon}^{\text{Austria}}")
+
+# ##### Text Display Types #####
+
+# ##### Input Widgets #####
+
+# # c1, c2 = st.columns((1, 2))
+
+# # with c1:
+    
+# #     if st.button('press'):
+# #         st.write('Button pressed')
+# #     else:
+# #         st.write('Button never pressed')
+    
+# #     text_input = st.text_input("Enter your name")
+# #     st.write("your name is ...", text_input)
+
+
+# ##### Input Widgets #####
+
+# ##### Charts #####
+
+# # c1, c2 = st.columns((1, 2))
+
+# # with c1:
+
+# #     chart_data = pd.DataFrame(
+# #         np.random.randn(20, 1),
+# #         columns=["a"])
+
+# #     st.bar_chart(chart_data)
+
+# ##### Charts #####
+
+# ##### Media #####
+
+# c1, c2 = st.columns((1, 2))
+
+# with c1:
+#     st.image("https://i.imgur.com/naDZBfE.jpeg")
+    
+# ##### Media #####
+
+##### XKCD Comic Fetcher #####
+
+import streamlit as st
+import pandas as pd
+from preprocess import preprocess__
+from model_file import get_images
+import random
+
+st.set_page_config(page_title='Comic Fetcher', page_icon = "favicon.png", layout = 'wide', initial_sidebar_state = 'auto')
+c1, c2= st.columns((1, 2))
+header = st.container()
+dataset_container = st.container()
+
+with header and c1:
+    st.title("XKCD COMIC FETCHER")
+    st.header("Get 1 random Comic")
+    file_name = "xkcd_data.json"
+    dataset = preprocess__(file_name)
+    user_input = st.text_input("Keyword to look for in comics!")
+    num_results = st.empty()
+
+with c2:
+    image_urls, image_link_nums, comic_title = get_images(dataset, user_input)
+    num_of_urls = len(image_urls)
+
+with c1:
+    if user_input!="":
+        if(num_of_urls>0):
+            st.text("Showing 1 image out of " + str(num_of_urls) + " results")
+    
+with c2:
+    if(num_of_urls<=0):
+        num_results.text("No results, Sorry to disappoint you") 
+
+    else:
+        n = random.randint(0,len(image_urls)-1)
+        st.header(comic_title[n])
+        st.markdown("![temp]("+image_urls[n]+")")
+        comic_link = "https://xkcd.com/" + str(image_link_nums[n])
+        st.markdown("Permanent Comic Link to share: "+comic_link, unsafe_allow_html=True)
+
+#### XKCD Comic Fetcher #####
+
+
+# footer="""<style>
+# a:link , a:visited{
+# color: blue;
+# background-color: transparent;
+# text-decoration: underline;
+# }
+
+# a:hover,  a:active {
+# color: red;
+# background-color: transparent;
+# text-decoration: underline;
+# }
+
+# .footer {
+# position: fixed;
+# left: 0;
+# bottom: 0;
+# width: 100%;
+# background-color: white;
+# color: black;
+# text-align: center;
+# }
+# </style>
+# <div class="footer">
+# <p>Developed by <a style='text-align: left;' href="https://www.languageof.me/" target="_blank">Siddharth Gupta</a> | 
+# All image rights reserved to the very awesome <a style='text-align: center;' href="https://www.xkcd.com/" target="_blank">xkcd</a>
+# Under <a style='text-align: center;' href="https://xkcd.com/license.html" target="_blank">Attribution-NonCommercial 2.5 License.</a> | 
+# <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fxkcd-fetcher.herokuapp.com&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+# </p>
+# </div>
+# """
+# st.markdown(footer, unsafe_allow_html=True)
