@@ -1,6 +1,8 @@
-# Pyjamas 2022 Talk titled: Streamlit to Build & Deploy Apps like a Data Scientist
+# Pycon Austria Workshop titled: Streamlit to Build & Deploy Apps like a Data Scientist
 
-A deep dive walkthrough into various aspects of Streamlit library. The commented sections in the main.py file is expected to be uncommented one at a time to go well with the talk/PPT. We also walkthrough XKCD comic fetcher implementation. Who doesn't love Xkcd comics? They are the most relatable and quirky comics I have come across wrt programming and linguistics. While there are 2500+ of them, won't it be nice to fetch a comic relevant to a scenario and share it with friends? That is exactly what I came up with.
+A deep dive walkthrough into various aspects of Streamlit library. The commented sections in the main.py file is expected to be uncommented one at a time to go well with the talk/PPT. We also walkthrough XKCD comic fetcher implementation. 
+
+Who doesn't love Xkcd comics? They are the most relatable and quirky comics I have come across wrt programming and linguistics. While there are 2500+ of them, won't it be nice to fetch a comic relevant to a scenario and share it with friends? That is exactly what I came up with.
 
 Give a keyword, and get the xkcd comic in response. Hope you like it as much as I enjoyed making it!
 
