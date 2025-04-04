@@ -1,16 +1,16 @@
-# ##### Libraries #####
-# import streamlit as st
-# import pandas as pd
-# import numpy as np
-# ##### Libraries #####
+##### Libraries #####
+import streamlit as st
+import pandas as pd
+import numpy as np
+##### Libraries #####
 
-# ##### Page config #####
-# # Wide Layout uses entire screen (I prefer),
-# # Centered restricts to centre 
-# st.set_page_config(page_title='Comic Fetcher', 
-# page_icon = "favicon.png", 
-# layout = 'wide', #wide / centered 
-# initial_sidebar_state = 'auto') #prefer auto
+##### Page config #####
+# Wide Layout uses entire screen (I prefer),
+# Centered restricts to centre 
+st.set_page_config(page_title='Comic Fetcher', 
+page_icon = "favicon.png", 
+layout = 'wide', #wide / centered 
+initial_sidebar_state = 'auto') #prefer auto
 
 # ##### Page config #####
 
