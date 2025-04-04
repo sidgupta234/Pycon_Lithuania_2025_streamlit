@@ -99,44 +99,44 @@
 
 ##### XKCD Comic Fetcher #####
 
-import streamlit as st
-import pandas as pd
-from preprocess import preprocess__
-from model_file import get_images
-import random
+# import streamlit as st
+# import pandas as pd
+# from preprocess import preprocess__
+# from model_file import get_images
+# import random
 
-st.set_page_config(page_title='Comic Fetcher', page_icon = "favicon.png", layout = 'wide', initial_sidebar_state = 'auto')
-c1, c2= st.columns((1, 2))
-header = st.container()
-dataset_container = st.container()
+# st.set_page_config(page_title='Comic Fetcher', page_icon = "favicon.png", layout = 'wide', initial_sidebar_state = 'auto')
+# c1, c2= st.columns((1, 2))
+# header = st.container()
+# dataset_container = st.container()
 
-with header and c1:
-    st.title("XKCD COMIC FETCHER")
-    st.header("Get 1 random Comic")
-    file_name = "xkcd_data.json"
-    dataset = preprocess__(file_name)
-    user_input = st.text_input("Keyword to look for in comics!")
-    num_results = st.empty()
+# with header and c1:
+#     st.title("XKCD COMIC FETCHER")
+#     st.header("Get 1 random Comic")
+#     file_name = "xkcd_data.json"
+#     dataset = preprocess__(file_name)
+#     user_input = st.text_input("Keyword to look for in comics!")
+#     num_results = st.empty()
 
-with c2:
-    image_urls, image_link_nums, comic_title = get_images(dataset, user_input)
-    num_of_urls = len(image_urls)
+# with c2:
+#     image_urls, image_link_nums, comic_title = get_images(dataset, user_input)
+#     num_of_urls = len(image_urls)
 
-with c1:
-    if user_input!="":
-        if(num_of_urls>0):
-            st.text("Showing 1 image out of " + str(num_of_urls) + " results")
+# with c1:
+#     if user_input!="":
+#         if(num_of_urls>0):
+#             st.text("Showing 1 image out of " + str(num_of_urls) + " results")
     
-with c2:
-    if(num_of_urls<=0):
-        num_results.text("No results, Sorry to disappoint you") 
+# with c2:
+#     if(num_of_urls<=0):
+#         num_results.text("No results, Sorry to disappoint you") 
 
-    else:
-        n = random.randint(0,len(image_urls)-1)
-        st.header(comic_title[n])
-        st.markdown("![temp]("+image_urls[n]+")")
-        comic_link = "https://xkcd.com/" + str(image_link_nums[n])
-        st.markdown("Permanent Comic Link to share: "+comic_link, unsafe_allow_html=True)
+#     else:
+#         n = random.randint(0,len(image_urls)-1)
+#         st.header(comic_title[n])
+#         st.markdown("![temp]("+image_urls[n]+")")
+#         comic_link = "https://xkcd.com/" + str(image_link_nums[n])
+#         st.markdown("Permanent Comic Link to share: "+comic_link, unsafe_allow_html=True)
 
 #### XKCD Comic Fetcher #####
 
