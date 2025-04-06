@@ -17,8 +17,8 @@
 - **`comic_fetcher/`**: Directory for the XKCD Comic Fetcher app
   - **`comic_fetcher_app.py`**: Main Python script for the comic fetcher app
 - **`song_lyric_app/`**: Directory for the song lyric app
-  - **`app_answers.py`**: Script with answers 
-  - **`app_exercise.py`**: Script with comments to make comic fetcher app
+  - **`app_exercise.py`**: Script with comments to make lyric fetcher app
+  - **`app_answers.py`**: Script with code to make lyric fetcher app
 
 #### All important files
 - **`README.md`**: This file, providing project details and instructions
