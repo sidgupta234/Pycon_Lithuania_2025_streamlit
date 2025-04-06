@@ -1,6 +1,5 @@
 # PyCon Austria Workshop: Streamlit to Build & Deploy Apps like a Data Scientist
 
-
 ## Resources
 - **Presentation** [Streamlit to Build & Deploy Apps like a Data Scientist](https://docs.google.com/presentation/d/1M06ogyEF9OBFNoXkY4fdeJ6e_dIlwrlL299K-KjvQ4w/edit?usp=sharing)
 - **Streamlit Guide:** [Official Streamlit Documentation]([https://docs.streamlit.io/library](https://docs.streamlit.io/))
@@ -45,11 +44,13 @@
 ## Further Details
 - **Dataset used:** [XKCD Comic Dataset](https://www.kaggle.com/ashkave/xkcd-comic-data)
 - **Libraries used:** Pandas, Streamlit
+- **short link for this repo:** [short link](https://tinyurl.com/pystreamlit)
 
 ## Contact and Contributions
 - **For doubts, queries, or suggestions:**  
   - [LinkedIn](https://www.linkedin.com/in/sidgupta234)
   - [Email](mailto:siddharthgupta234@gmail.com)
+ 
 
 - **Contributions:**  
   - Raise an issue or submit a pull request!
