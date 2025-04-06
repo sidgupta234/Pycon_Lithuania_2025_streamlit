@@ -42,7 +42,7 @@ initial_sidebar_state = 'auto') #prefer auto
 
 # # ##### Text Display Types #####
 
-c1, c2 = st.columns((1, 2))
+# c1, c2 = st.columns((1, 2))
 
 # with c1:
 #     st.markdown("<i>Markdown: We are having fun in Pycon Austria </i>", unsafe_allow_html=True)
