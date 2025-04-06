@@ -1,24 +1,58 @@
-# Pycon Austria Workshop titled: Streamlit to Build & Deploy Apps like a Data Scientist
+# PyCon Austria Workshop: Streamlit to Build & Deploy Apps like a Data Scientist
 
-A deep dive walkthrough into various aspects of Streamlit library. The commented sections in the main.py file is expected to be uncommented one at a time to go well with the talk/PPT. We also walkthrough XKCD comic fetcher implementation. 
 
-Who doesn't love Xkcd comics? They are the most relatable and quirky comics I have come across wrt programming and linguistics. While there are 2500+ of them, won't it be nice to fetch a comic relevant to a scenario and share it with friends? That is exactly what I came up with.
+## Resources
+- **Presentation** [Streamlit to Build & Deploy Apps like a Data Scientist](https://docs.google.com/presentation/d/1M06ogyEF9OBFNoXkY4fdeJ6e_dIlwrlL299K-KjvQ4w/edit?usp=sharing)
+- **Streamlit Guide:** [Official Streamlit Documentation]([https://docs.streamlit.io/library](https://docs.streamlit.io/))
 
-Give a keyword, and get the xkcd comic in response. Hope you like it as much as I enjoyed making it!
+## Projects
+- [Playlist Maker](https://playlist-gen.streamlit.app/)
+- [XKCD Comic Fetcher](https://xkcdcomic.streamlit.app/)
 
-Live app: [xkcd-fetcher.herokuapp.com](https://xkcd-fetcher.herokuapp.com)
+### Here’s an overview of the project directory structure:
+  
+##### Key files
 
-![alt text for screen readers](https://i.ibb.co/zfb8qcf/16055772-91aa521c678c14c585cbae8979208400.png "Picture of xkcd comic")
+- **`streamlit_features.py`** - To explore and understand basic flow of streamlit and its features
+- **`comic_fetcher/`**: Directory for the XKCD Comic Fetcher app
+  - **`comic_fetcher_app.py`**: Main Python script for the comic fetcher app
+- **`song_lyric_app/`**: Directory for the song lyric app
+  - **`app_answers.py`**: Script with answers 
+  - **`app_exercise.py`**: Script with comments to make comic fetcher app
 
-## Further details
-Dataset used: [xkcd Comic Dataset](https://www.kaggle.com/ashkave/xkcd-comic-data)
+#### All important files
+- **`README.md`**: This file, providing project details and instructions
+- **`Streamlit_Pycon.pdf`**: PDF document with a presentation on the app
+- **`comic_fetcher/`**: Directory for the XKCD Comic Fetcher app
+  - **`comic_fetcher_app.py`**: Main Python script for the comic fetcher app
+  - **`scripts/`**: Folder with utility scripts
+    - **`model_file.py`**: Model file for comic fetching logic
+    - **`preprocess.py`**: Data preprocessing script
+  - **`xkcd_data.json`**: JSON file with XKCD comic data
+- **`song_lyric_app/`**: Directory for the song lyric app
+  - **`app_answers.py`**: Script with answers 
+  - **`app_exercise.py`**: Script with comments to make comic fetcher app
+  - **`subset_lyrics.csv`**: CSV file with song lyrics data
+- **`streamlit_features.py`**: streamlit features exploration
+- **`requirements.txt`**: Python dependencies for the project
 
-Libraries used: Pandas, Streamlit
+## Getting Started
+1. **Clone the repository:** `git clone https://github.com/sidgupta234/Pycon_Austria_2025_streamlit)`
+2. **Install Pandas and streamlit:** `pip install streamlit` `pip install pandas`
 
-## For doubts, queries, suggestions
-Ping [Siddharth](https://www.languageof.me) on [Twitter](https://www.twitter.com/sidgupta234), [Linkedin](https://www.linkedin.com/in/sidgupta234), or simply write an [e-mail](mailto:siddharthgupta234@gmail.com). 
+3. **Test if streamlit is installed:** `streamlit hello`
 
-For suggestions, improvements you can also just raise an issue or request a pull request!
-<b><p> All image rights reserved to the very awesome <a style='text-align: center;' href="https://www.xkcd.com/" target="_blank">xkcd</a>
-under <a style='text-align: center;' href="https://xkcd.com/license.html" target="_blank">Attribution-NonCommercial 2.5 License.</a> 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsidgupta234%2Fxkcd-comic-fetcher%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) </p></b> 
+## Further Details
+- **Dataset used:** [XKCD Comic Dataset](https://www.kaggle.com/ashkave/xkcd-comic-data)
+- **Libraries used:** Pandas, Streamlit
+
+## Contact and Contributions
+- **For doubts, queries, or suggestions:**  
+  - [LinkedIn](https://www.linkedin.com/in/sidgupta234)
+  - [Email](mailto:siddharthgupta234@gmail.com)
+
+- **Contributions:**  
+  - Raise an issue or submit a pull request!
+
+## Licensing
+- All image rights reserved by the fantastic [XKCD](https://www.xkcd.com) under the [Attribution-NonCommercial 2.5 License](https://xkcd.com/license.html).
