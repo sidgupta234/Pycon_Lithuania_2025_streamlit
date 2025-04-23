@@ -36,7 +36,7 @@
 - **`requirements.txt`**: Python dependencies for the project
 
 ## Getting Started
-1. **Clone the repository:** `git clone https://github.com/sidgupta234/Pycon_Austria_2025_streamlit`
+1. **Clone the repository:** `git clone https://github.com/sidgupta234/Pycon_Lithuania_2025_streamlit`
 2. **Install Pandas and streamlit:** `pip install streamlit` `pip install pandas`
 
 3. **Test if streamlit is installed:** `streamlit hello`
