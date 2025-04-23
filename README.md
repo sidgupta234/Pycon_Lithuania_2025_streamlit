@@ -3,6 +3,7 @@
 ## Resources
 - **Presentation** [Streamlit to Build & Deploy Apps like a Data Scientist](https://docs.google.com/presentation/d/1M06ogyEF9OBFNoXkY4fdeJ6e_dIlwrlL299K-KjvQ4w/edit?usp=sharing)
 - **Streamlit Guide:** [Official Streamlit Documentation](https://docs.streamlit.io/)
+- **Deploying on Streamlit cloud** [Streamlit cloud](https://streamlit.io/cloud)
 
 ## Projects
 - [Playlist Maker](https://playlist-gen.streamlit.app/)
